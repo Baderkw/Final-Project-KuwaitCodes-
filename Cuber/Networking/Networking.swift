@@ -58,6 +58,7 @@ class Networking// : Networkable
         }
     }
     
+    
     static func getListOf<T: Codable>(COLLECTION_NAME: String, success: @escaping([T])-> Void)
     {
         getListOf(COLLECTION_NAME: COLLECTION_NAME, success: success) { err in}

@@ -61,9 +61,19 @@ struct ContentView: View {
                             VStack {
                                 HStack {
                                     Spacer()
-                                    MenuView(animate: self.$menuIsShown)
-                                }
                                     
+                                    Button(action: {
+                                        withAnimation {
+                                            self.menuIsShown.toggle()
+                                            print("Tapped")
+                                        }
+                                    }, label: {
+                                        Image("menuButton")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 60)
+                                    }).buttonStyle(PlainButtonStyle())
+                                }
                                 .padding([.top], 30)
                                 Spacer()
                             }
@@ -76,21 +86,23 @@ struct ContentView: View {
                     .onAppear(perform: getCompetitions)
                     .onAppear(perform: getAllData)
                     .gesture(
-                        DragGesture()
-                            .onEnded({ (value) in
-                                if self.tutorialView == nil {
-                                    if value.translation.width > 0 {
-                                        withAnimation{
-                                            self.menuIsShown = false
-                                        }
-                                    }else {
-                                        withAnimation{
-                                            self.menuIsShown = true
-                                        }
-                                    }
+                    DragGesture()
+                        .onEnded({ (value) in
+                            
+                            if value.translation.width > 0 {
+                                withAnimation{
+                                    self.menuIsShown = false
                                 }
-                            }))
+                            }else {
+                                withAnimation{
+                                    self.menuIsShown = true
+                                }
+                            }
+                            
+                        }))
                 }
+                
+                
             }
             .onAppear(perform: checkSignedIn)
         }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,8 +16,6 @@
 		1E1C653224B7948D001255F2 /* TimerSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C653124B7948D001255F2 /* TimerSettings.swift */; };
 		1E1C653424B79A6F001255F2 /* TimerColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C653324B79A6F001255F2 /* TimerColorPicker.swift */; };
 		1E24CA0224B52F4800F4AC6F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E24CA0124B52F4800F4AC6F /* HomeView.swift */; };
-		1E45155024C3AED900ACF592 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E45154F24C3AED900ACF592 /* Menu.swift */; };
-		1E45155324C44CCC00ACF592 /* PureSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1E45155224C44CCC00ACF592 /* PureSwiftUI */; };
 		1E713F9424B9BE4A003FDC9C /* UpcomingCompetitionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E713F9324B9BE4A003FDC9C /* UpcomingCompetitionsView.swift */; };
 		1E713F9724B9CF91003FDC9C /* CompetitionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E713F9624B9CF91003FDC9C /* CompetitionCard.swift */; };
 		1E713F9924B9CFCE003FDC9C /* Competiton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E713F9824B9CFCE003FDC9C /* Competiton.swift */; };
@@ -84,7 +82,6 @@
 		1E1C653124B7948D001255F2 /* TimerSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettings.swift; sourceTree = "<group>"; };
 		1E1C653324B79A6F001255F2 /* TimerColorPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerColorPicker.swift; sourceTree = "<group>"; };
 		1E24CA0124B52F4800F4AC6F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		1E45154F24C3AED900ACF592 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		1E713F9324B9BE4A003FDC9C /* UpcomingCompetitionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCompetitionsView.swift; sourceTree = "<group>"; };
 		1E713F9624B9CF91003FDC9C /* CompetitionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionCard.swift; sourceTree = "<group>"; };
 		1E713F9824B9CFCE003FDC9C /* Competiton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Competiton.swift; sourceTree = "<group>"; };
@@ -148,7 +145,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E45155324C44CCC00ACF592 /* PureSwiftUI in Frameworks */,
 				442EC8D5E64CD7ADDD5F61CD /* Pods_Cuber.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,7 +240,6 @@
 		1E494C6624B71A83004BBF53 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				1E45154F24C3AED900ACF592 /* Menu.swift */,
 				1ED4EA5924B5D68000ADD3F6 /* MenuButton.swift */,
 				1E80375A24BD1300000D7F08 /* SignOutButton.swift */,
 			);
@@ -464,9 +459,6 @@
 			dependencies = (
 			);
 			name = Cuber;
-			packageProductDependencies = (
-				1E45155224C44CCC00ACF592 /* PureSwiftUI */,
-			);
 			productName = Cuber;
 			productReference = 1ECC563F24B4E516005D61E0 /* Cuber.app */;
 			productType = "com.apple.product-type.application";
@@ -495,9 +487,6 @@
 				Base,
 			);
 			mainGroup = 1ECC563624B4E516005D61E0;
-			packageReferences = (
-				1E45155124C44CCC00ACF592 /* XCRemoteSwiftPackageReference "pure-swift-ui" */,
-			);
 			productRefGroup = 1ECC564024B4E516005D61E0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -616,7 +605,6 @@
 				1E12A7B024B7D2B5008EB6C8 /* CubeTimer.swift in Sources */,
 				1E1C652D24B77C4D001255F2 /* TimerView.swift in Sources */,
 				1E98354524BDE52500FDE466 /* PLLView.swift in Sources */,
-				1E45155024C3AED900ACF592 /* Menu.swift in Sources */,
 				1EFD2DEE24BCE33E000CE116 /* Codable.swift in Sources */,
 				1EFD2DE924BCE33E000CE116 /* ImageUploader.swift in Sources */,
 				1EC5A0DD24BB1F4C00426B42 /* SigningFields.swift in Sources */,
@@ -838,25 +826,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		1E45155124C44CCC00ACF592 /* XCRemoteSwiftPackageReference "pure-swift-ui" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/CodeSlicing/pure-swift-ui.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.15.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		1E45155224C44CCC00ACF592 /* PureSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E45155124C44CCC00ACF592 /* XCRemoteSwiftPackageReference "pure-swift-ui" */;
-			productName = PureSwiftUI;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1ECC564624B4E516005D61E0 /* Cuber.xcdatamodeld */ = {
