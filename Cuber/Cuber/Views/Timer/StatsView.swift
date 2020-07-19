@@ -24,7 +24,7 @@ struct StatsView: View {
                 Spacer()
                 
                 HStack(spacing: 40) {
-                    BestStats(text: "أفضل حل", time: self.$bestTime.time)
+                    BestStats(text: "أسرع حل", time: self.$bestTime.time)
                     BestStats(text: "متوسط آخر 5 حلول", time: self.$averageOfLast5.time)
                 }
                 

@@ -186,7 +186,6 @@
 				1E713F9524B9BE83003FDC9C /* UpcomingCompetitions */,
 				1E494C6524B71A71004BBF53 /* Home */,
 				1EC5A0DB24BB1F2A00426B42 /* Sign */,
-				1E45154F24C3AED900ACF592 /* Menu.swift */,
 			);
 			path = CustomPartOfViews;
 			sourceTree = "<group>";
@@ -245,6 +244,7 @@
 		1E494C6624B71A83004BBF53 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				1E45154F24C3AED900ACF592 /* Menu.swift */,
 				1ED4EA5924B5D68000ADD3F6 /* MenuButton.swift */,
 				1E80375A24BD1300000D7F08 /* SignOutButton.swift */,
 			);

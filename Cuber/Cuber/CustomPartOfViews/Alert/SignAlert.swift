@@ -50,6 +50,11 @@ struct SignAlert: View {
                         
                 })
             }
+            .onAppear {
+                if self.imageName == "error" {
+                    self.vibrate()
+                }
+            }
         }
         
         .frame(width: 351, height: 313)
@@ -57,6 +62,13 @@ struct SignAlert: View {
         .cornerRadius(20)
         .shadow(radius: 3)
     }
+    
+    func vibrate() {
+        let impactFeedbackgenerator = UIImpactFeedbackGenerator(style: .heavy)
+        impactFeedbackgenerator.prepare()
+        impactFeedbackgenerator.impactOccurred()
+    }
+    
 }
 
 struct SignAlert_Previews: PreviewProvider {
